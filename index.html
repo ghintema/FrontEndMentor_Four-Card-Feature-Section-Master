@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Four card feature section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+	@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+	* {
+		box-sizing: border-box;
+		margin:auto;
+	}
+	header{
+		padding-top:85px;
+		padding-bottom:75px
+	}
+	header p.reliable, header p.powered{
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 275;
+		font-size: 24px;
+		line-height: 36px;
+		letter-spacing: 0.166667px;
+		color: #4D4F62;
+	
+		text-align: center;
+	}
+	header p.powered{
+		font-weight: 600;
+		margin:15px
+	}
+	header p.description, div.card p.description{
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 25px;
+		/* or 167% */
+		text-align: center;
+		letter-spacing: 0.104167px;
+		color: #4D4F62;
+		mix-blend-mode: normal;
+		opacity: 0.5;
+		width:311px;
+	}
+	div.card p.description{
+		width:254px;
+		text-align:left;
+		font-size: 13px;
+		letter-spacing: 0.1px;
+	}
+	div.card h3{
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 30px;
+		color: #4D4F62;
+		margin:30px auto 10px 30px;
+	}
+	div.card { /* card definition */
+		position:relative;
+		width:311px;
+		height:222px;
+		margin-bottom:25px;
+		border-radius:8px;
+		background-color: #FFFFFF;
+		box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+		
+	}
+	div[class^="colorbar"]{ /*Definition of color-stripe */
+		width:311px;
+		height: 3.5px;
+		border-radius:8px 8px 0px 0px
+	}
+	/* colors for color-stripe*/
+	div.colorbar1{
+		background-color:#44D3D2;
+	}
+	div.colorbar2{
+		background-color: #EA5454;
+	}
+	div.colorbar3{
+		background-color: #FCAE4A;
+	}
+	div.colorbar4{
+		background-color: #549EF2;
+	}
+	img.icon { /* Icon positioning*/
+		position:absolute;
+		width:57px;
+		height: 57px;
+		bottom:28px;
+		right:28px;
+	}
+
+
+	
+
+
+	
+
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+
+	<header>
+		<p class="reliable">Reliable, efficient delivery</p>
+		<p class="powered">Powered by Technology</p>
+		<p class="description">Our Artificial Intelligence powered tools use millions of project data points 
+		to ensure that your project is successful</p>
+	</header>
+	<main>
+		<div class="cardwrapper">
+			<div class="card">
+				<div class="colorbar1"></div>	
+				<h3>Supervisor</h3>
+				<p class="description">Monitors activity to identify project roadblocks</p>
+				<img class="icon" src="images/icon-supervisor.svg">
+			</div>
+			<div class="card">
+				<div class="colorbar2"></div>
+				<h3>Team Builder</h3>
+				<p class="description">Scans our talent network to create the optimal team for your project</p>
+				<img class="icon" src="images/icon-team-builder.svg">
+			</div>
+			<div class="card">
+				<div class="colorbar3"></div>
+				<h3>Karma</h3>
+				<p class="description">Regularly evaluates our talent to ensure quality</p>
+				<img class="icon" src="images/icon-karma.svg">
+			</div>
+			<div class="card">
+				<div class="colorbar4"></div>
+				<h3>Calculator</h3>
+				<p class="description">Uses data from past projects to provide better delivery estimates</p>
+				<img class="icon" src="images/icon-calculator.svg">
+			</div>
+		</div>
+	</main>
+  	<footer>
+    	<p class="attribution">
+      		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      	Coded by <a href="#">Harm Intemann</a>.
+    	</p>
+  	</footer>
+</body>
+</html>
+
+
+
