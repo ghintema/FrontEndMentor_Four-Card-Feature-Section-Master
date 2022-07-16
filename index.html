@@ -35,7 +35,7 @@
 		font-weight: 600;
 		margin:15px
 	}
-	header p.description, div.card p.description{
+	header p.description, div[class^="card"] p.description{
 		font-family: 'Poppins';
 		font-style: normal;
 		font-weight: 400;
@@ -49,13 +49,13 @@
 		opacity: 0.5;
 		width:311px;
 	}
-	div.card p.description{
+	div[class^="card"] p.description{
 		width:254px;
 		text-align:left;
 		font-size: 13px;
 		letter-spacing: 0.1px;
 	}
-	div.card h3{
+	div[class^="card"] h3{
 		font-family: 'Poppins';
 		font-style: normal;
 		font-weight: 600;
@@ -64,7 +64,7 @@
 		color: #4D4F62;
 		margin:30px auto 10px 30px;
 	}
-	div.card { /* card definition */
+	div[class^="card"] { /* card definition */
 		position:relative;
 		width:311px;
 		height:222px;
@@ -100,13 +100,32 @@
 		right:28px;
 	}
 
-
-	
-
-
-	
-
-
+	@media (min-width:762px) {
+		div.wrapper{
+			display:grid;
+			grid-template-columns: repeat(3,311px)
+			grid-template-rows:repeat(4,222px);
+			grid-gap:25px;
+			justify-content:center;
+		}
+		div[class^="card"] {
+			margin:0px;
+		}
+		div.card1{
+			grid-area:2/1/4/2;
+		}
+		div.card2{
+			grid-area:1/2/3/3;
+		}
+		div.card3{
+			grid-area:3/2/5/3;
+		}
+		div.card4{
+			grid-area:2/3/4/4;
+		}
+		
+		
+	}
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
@@ -121,26 +140,26 @@
 		to ensure that your project is successful</p>
 	</header>
 	<main>
-		<div class="cardwrapper">
-			<div class="card">
+		<div class="wrapper">
+			<div class="card1">
 				<div class="colorbar1"></div>	
 				<h3>Supervisor</h3>
 				<p class="description">Monitors activity to identify project roadblocks</p>
 				<img class="icon" src="images/icon-supervisor.svg">
 			</div>
-			<div class="card">
+			<div class="card2">
 				<div class="colorbar2"></div>
 				<h3>Team Builder</h3>
 				<p class="description">Scans our talent network to create the optimal team for your project</p>
 				<img class="icon" src="images/icon-team-builder.svg">
 			</div>
-			<div class="card">
+			<div class="card3">
 				<div class="colorbar3"></div>
 				<h3>Karma</h3>
 				<p class="description">Regularly evaluates our talent to ensure quality</p>
 				<img class="icon" src="images/icon-karma.svg">
 			</div>
-			<div class="card">
+			<div class="card4">
 				<div class="colorbar4"></div>
 				<h3>Calculator</h3>
 				<p class="description">Uses data from past projects to provide better delivery estimates</p>
