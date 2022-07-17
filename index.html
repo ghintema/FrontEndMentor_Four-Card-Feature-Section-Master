@@ -99,13 +99,18 @@
 		bottom:28px;
 		right:28px;
 	}
-
+	footer{
+		border:1px solid red;
+		position:absolute;
+		right:1px;
+		
+	}
 	@media (min-width:762px) {
 		div.wrapper{
 			display:grid;
-			grid-template-columns: repeat(3,311px)
-			grid-template-rows:repeat(4,222px);
-			grid-gap:25px;
+			grid-template-columns: repeat(3,auto);
+			grid-template-rows:repeat(4,111px);
+			grid-gap:12.5px 25px;
 			justify-content:center;
 		}
 		div[class^="card"] {
